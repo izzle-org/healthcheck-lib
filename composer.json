@@ -1,0 +1,25 @@
+{
+    "name": "izzle/healthcheck",
+    "description": "Simple Health Check Wrapper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Böhmer",
+            "email": "daniel@izzle.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Izzle\\HealthCheck\\": "src/",
+            "Izzle\\HealthCheck\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
