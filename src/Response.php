@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Izzle\HealthCheck;
 
@@ -14,17 +15,17 @@ class Response implements JsonSerializable
      * @var bool
      */
     protected bool $status = false;
-    
+
     /**
      * @var string|null
      */
     protected ?string $message = null;
-    
+
     /**
      * @var array|null
      */
     protected ?array $data = null;
-    
+
     /**
      * @param bool $status
      * @param string|null $message
@@ -36,10 +37,11 @@ class Response implements JsonSerializable
         $this->message = $message;
         $this->data = $data;
     }
-    
+
     /**
      * @return array|mixed
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return [
@@ -48,7 +50,7 @@ class Response implements JsonSerializable
             'data' => $this->data
         ];
     }
-    
+
     /**
      * @return bool
      */

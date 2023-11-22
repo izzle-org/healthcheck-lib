@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Izzle\HealthCheck;
 
@@ -12,7 +13,7 @@ interface CheckInterface
      * @return string
      */
     public function getName(): string;
-    
+
     /**
      * @param array|null $params
      * @return Response
