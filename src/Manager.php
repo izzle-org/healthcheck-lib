@@ -35,6 +35,7 @@ class Manager
 
     /**
      * @return array
+     * @throws InvalidArgumentException
      */
     public function run(): array
     {

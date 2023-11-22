@@ -17,7 +17,6 @@ namespace App\HealthChecks;
 
 use Izzle\HealthCheck\CheckInterface;
 use Izzle\HealthCheck\Response;
-use Throwable;
 use Exception;
 
 /**
@@ -44,7 +43,7 @@ class FolderPermissionCheck implements CheckInterface
             if (!is_writable('/some/folder')) {
                 throw new Exception('Folder /some/folder is not writeable!');
             }
-        } catch (Throwable $e) {
+        } catch (Exception $e) {
             return new Response(false, $e->getMessage());
         }
 
